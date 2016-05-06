@@ -1,5 +1,4 @@
-# R-Programs
-## R Programs written for Coursera R Programming Course
+## R Programs written for part of the Coursera R Programming Course
 
 These three R codes operate on the specdata.zip data set which contains 332 .csv files containing pollution monitoring data for 332 monitors at different locations.  Each monitor file contains the data of the observation, the level of sulfate particulate matter measured in the air, and the level of nitrate particulate measured in the air.  There are many 'NA' values in the data.
 
