@@ -1,8 +1,15 @@
 # download (temporarily) the training and test files and their column names from the zipped data, unzip it, 
 # and import into R
-url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-temp <- tempfile()
-download.file(url,temp)
+
+#url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+#temp <- tempfile()
+#download.file(url,temp)
+
+###############################################################################################################
+
+# Alternatively, assume the data has been downloaded and just load it from your working directory:
+
+temp <- "Acc_data.zip"
 
 train <- read.table(unz(temp,"UCI HAR Dataset/train/X_train.txt")) # training data
 train_subject <- read.table(unz(temp,"UCI HAR Dataset/train/subject_train.txt")) # labels training subjects
