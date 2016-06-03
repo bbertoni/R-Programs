@@ -55,4 +55,4 @@ The output is a data frame called "data" which contains the columns "subject" (a
 "avg-fbodybodygyromag-mean", "avg-fbodybodygyromag-std",   
 "avg-fbodybodygyrojerkmag-mean", "avg-fbodybodygyrojerkmag-std".
 
-The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".
+The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".  Note that these values are the averages of values which were normalized to have a value between -1 and 1 from the original data set.
