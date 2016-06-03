@@ -30,9 +30,7 @@ This data contains many files and folders.  I used the data that they provided w
 The output is a data frame called "data" which contains the columns "subject" (a numerical value between 1 and 30 labeling the person that the data was obtained from), "activity" (one of the six activities: "walking", "walking_upstairs", "walking_downstairs", "sitting", "standing", or laying"), and all the columns names previously grouped under "variable", now with a preceeding "avg-" label.  These columns are:
 
 "avg-tbodyacc-mean-x", "avg-tbodyacc-mean-y", "avg-tbodyacc-mean-z",
-
-"avg-tbodyacc-std-x", "avg-tbodyacc-std-y", "avg-tbodyacc-std-z", 
-
+"avg-tbodyacc-std-x", "avg-tbodyacc-std-y", "avg-tbodyacc-std-z",
 "avg-tgravityacc-mean-x", "avg-tgravityacc-mean-y", "avg-tgravityacc-mean-z",
 
 "avg-tgravityacc-std-x", "avg-tgravityacc-std-y", "avg-tgravityacc-std-z", 
