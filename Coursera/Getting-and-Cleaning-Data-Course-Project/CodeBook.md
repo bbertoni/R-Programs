@@ -14,4 +14,17 @@ This data contains many files and folders.  I used the data that they provided w
 
 ## Transformations to Data
 
+1. The three training data files are column-bound to produce one training data set called "train" (which now has 563 variables, the 561 from the first file, and now also a "subject" variable and an "activity" variable).
+2. The three test data files are column-bound to produce one test data set called "test" (which now has 563 variables, the 561 from the first file, and now also a "subject" variable and an "activity" variable).
+3. The independent training and test data are then merged/combined to form a data frame called "merged."
+4. The variables in the columns of the data frame "merged" are restricted to the data which are means or standard deviations, or are the "subject" or "activity" variables.
+5. The "activity" variable is converted from a numeric value (as it is given in the original "y_train.txt" and "y_train.txt" data sets) to a descriptive character value using the correspondence given in "activity_labels.txt."
+6. The "merged" data frame is "tidied up" by removing instances of "()" in the variable names, making all the variable names lowercase, and making the "activity" character values lowercase.
+7. A new, independent data frame called "data" is created by:
+** Melting the data frame "merged" to a four column data set containing the columns "subject", "activity", "variable" (which contains the other variable names), and "value" (which contains the values of the variables for a given variable name, subject, and activity).
+** The mean for each variable (only means and standard deviation variables from the original data set) for a given "subject" and "activity" is the calculated.
+** The data is recast as a data frame called "data" with columns "subject", "activity", and all the columns names previously grouped under "variable", now with a preceeding "avg-" label.  The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".
+
 ## Output Data
+
+The output is a data frame called "data" which contains the columns "subject" (a numerical value between 1 and 30 labeling the person that the data was obtained from), "activity" (one of the six activities: "walking", "walking_upstairs", "walking_downstairs", "sitting", "standing", or laying"), and all the columns names previously grouped under "variable", now with a preceeding "avg-" label (there are 66 of these, the first six being e.g. "avg-tbodyacc-mean-x", "avg-tbodyacc-mean-y", "avg-tbodyacc-mean-z", "avg-tbodyacc-std-x", "avg-tbodyacc-std-y", "avg-tbodyacc-std-z").  The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".
