@@ -104,5 +104,7 @@ colnames(data) <- paste("avg",colnames(data),sep="-")
 colnames(data)[1] <- "subject" # correct the column names I just messed up...
 colnames(data)[2] <- "activity"
 
-# Now data contains out final tidy data set!
+# Now data contains out final tidy data set!  Output it:
+write.table(data,"/home/bridget/Coursera/Getting_and_Cleaning_Data/tidy_data.txt",row.names=FALSE)
+
 
