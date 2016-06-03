@@ -7,7 +7,7 @@ This repo contains three files, "run_analysis.R", "tidy_data.txt", and "CodeBook
 * Uses descriptive activity names to name the activities in the data set
 * Appropriately labels the data set with descriptive variable names.
 * From the data set obtained, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-* This tidy data set is written out into a text file, "tidey_data.txt"
+* This tidy data set is written out into a text file, "tidy_data.txt"
 
 ## tidy_data.txt
 "tidy_data.txt" is the output tidy data set from "run_analysis.R".  It contains the average of each variable from the original accelerometer data set that is either a mean or standard deviation, for each activity and each subject.
