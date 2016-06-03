@@ -21,9 +21,9 @@ This data contains many files and folders.  I used the data that they provided w
 5. The "activity" variable is converted from a numeric value (as it is given in the original "y_train.txt" and "y_train.txt" data sets) to a descriptive character value using the correspondence given in "activity_labels.txt."
 6. The "merged" data frame is "tidied up" by removing instances of "()" in the variable names, making all the variable names lowercase, and making the "activity" character values lowercase.
 7. A new, independent data frame called "data" is created by:
-** Melting the data frame "merged" to a four column data set containing the columns "subject", "activity", "variable" (which contains the other variable names), and "value" (which contains the values of the variables for a given variable name, subject, and activity).
-** The mean for each variable (only means and standard deviation variables from the original data set) for a given "subject" and "activity" is the calculated.
-** The data is recast as a data frame called "data" with columns "subject", "activity", and all the columns names previously grouped under "variable", now with a preceeding "avg-" label.  The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".
+  1. Melting the data frame "merged" to a four column data set containing the columns "subject", "activity", "variable" (which contains the other variable names), and "value" (which contains the values of the variables for a given variable name, subject, and activity).
+  2. The mean for each variable (only means and standard deviation variables from the original data set) for a given "subject" and "activity" is the calculated.
+  3. The data is recast as a data frame called "data" with columns "subject", "activity", and all the columns names previously grouped under "variable", now with a preceeding "avg-" label.  The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".
 
 ## Output Data
 
