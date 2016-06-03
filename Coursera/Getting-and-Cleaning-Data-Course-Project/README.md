@@ -7,6 +7,7 @@ This repo contains two files, "run_analysis.R" and "CodeBook.md."
 * Uses descriptive activity names to name the activities in the data set
 * Appropriately labels the data set with descriptive variable names.
 * From the data set obtained, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+* This tidy data set is written out into a text file, "tidey_data.txt"
 
 ## CodeBook.md
 "CodeBook.md" describes the variables, the data, and the transformations that were performed to clean up the data. 
