@@ -9,7 +9,7 @@
 
 # Alternatively, assume the data has been downloaded and just load it from your working directory:
 
-temp <- "Acc_data.zip"
+temp <- "UCI HAR Dataset.zip"
 
 train <- read.table(unz(temp,"UCI HAR Dataset/train/X_train.txt")) # training data
 train_subject <- read.table(unz(temp,"UCI HAR Dataset/train/subject_train.txt")) # labels training subjects
@@ -24,7 +24,7 @@ col_names <- as.vector(col_names[,2]) # extract the column names for the data
 
 activity_names <- read.table(unz(temp,"UCI HAR Dataset/activity_labels.txt")) # extract the activity names
 
-unlink(temp)
+#unlink(temp)
 
 ###############################################################################################################
 
@@ -52,7 +52,7 @@ merged <-merge(train,test,all.x=TRUE,all.y=TRUE) # these data sets are independe
 # retain only those columns of the data which are means or standard deviations
 # i.e. retain only those columns of the data which have names containing the strings "mean()" or "std()"
 # also keep "subject" and "activity" columns
-col_indices <- grepl("(mean\\(\\)|std\\(\\))",col_names) # use double backslash to get parenthesis
+col_indices <- grepl("(mean|std)",col_names) 
 col_indices[length(col_indices)] <- TRUE
 col_indices[length(col_indices)-1] <- TRUE
 
@@ -77,7 +77,7 @@ for (i in 1:nrow(activity_names)) {
 # the names as already specified are nicely descriptive, so here we just clean up the names a bit by removing
 # the instances of "()" and making all the text lowercase
 
-col_names <- gsub("\\(\\)","",col_names) # again need the \\ for ( and )
+col_names <- gsub("\\(\\)","",col_names) # need the \\ for ( and )
 col_names <- tolower(col_names)
 
 # assign these columns names to the merged data set:
@@ -89,8 +89,8 @@ colnames(merged) <- col_names
 # each subject
 
 # we'll use the reshape package and the dplyr package
-library(reshape)
-library(dplyr)
+library(reshape2)
+library(plyr)
 
 # melt the merged data so that we sort by subject and activity
 merged_melt <- melt(merged,id=c("subject","activity")) # 4 column data frame with columns "subject",
