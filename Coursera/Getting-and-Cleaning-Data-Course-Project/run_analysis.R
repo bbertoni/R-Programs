@@ -13,8 +13,7 @@ test_subject <- read.table(unz(temp,"UCI HAR Dataset/test/subject_test.txt")) # 
 test_activity <- read.table(unz(temp,"UCI HAR Dataset/test/y_test.txt")) # labels test activities
 
 col_names <- read.table(unz(temp,"UCI HAR Dataset/features.txt"))
-col_names <- as.vector(tolower(col_names[,2])) # extract the column names for the data
-                                               # make them all lowercase
+col_names <- as.vector(col_names[,2]) # extract the column names for the data
 
 activity_names <- read.table(unz(temp,"UCI HAR Dataset/activity_labels.txt")) # extract the activity names
 
@@ -57,6 +56,7 @@ col_names <- col_names[col_indices]
 
 # use descriptive activity names instead of numbers
 activity_names[,2] <- as.character(activity_names[,2]) # convert activity names list to character vector
+activity_names[,2] <- tolower(activity_names[,2]) # make them all lowercase for tidy data
 
 for (i in 1:nrow(activity_names)) {
     rows <- merged$activity == activity_names[i,1]
