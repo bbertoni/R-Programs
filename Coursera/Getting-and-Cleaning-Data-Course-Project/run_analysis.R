@@ -101,6 +101,8 @@ data <- dcast(means,subject+activity~variable,value.var="mean")
 
 # relabel the commons to show that they now represent mean values:
 colnames(data) <- paste("avg",colnames(data),sep="-")
+colnames(data)[1] <- "subject" # correct the column names I just messed up...
+colnames(data)[2] <- "activity"
 
 # Now data contains out final tidy data set!
 
