@@ -27,6 +27,32 @@ This data contains many files and folders.  I used the data that they provided w
 
 ## Output Data
 
-The output is a data frame called "data" which contains the columns "subject" (a numerical value between 1 and 30 labeling the person that the data was obtained from), "activity" (one of the six activities: "walking", "walking_upstairs", "walking_downstairs", "sitting", "standing", or laying"), and all the columns names previously grouped under "variable", now with a preceeding "avg-" label (there are 66 of these, the first six being e.g. "avg-tbodyacc-mean-x", "avg-tbodyacc-mean-y", "avg-tbodyacc-mean-z", "avg-tbodyacc-std-x", "avg-tbodyacc-std-y", "avg-tbodyacc-std-z").  
+The output is a data frame called "data" which contains the columns "subject" (a numerical value between 1 and 30 labeling the person that the data was obtained from), "activity" (one of the six activities: "walking", "walking_upstairs", "walking_downstairs", "sitting", "standing", or laying"), and all the columns names previously grouped under "variable", now with a preceeding "avg-" label.  These columns are:
+
+"avg-tbodyacc-mean-x", "avg-tbodyacc-mean-y", "avg-tbodyacc-mean-z", 
+"avg-tbodyacc-std-x", "avg-tbodyacc-std-y", "avg-tbodyacc-std-z", 
+"avg-tgravityacc-mean-x", "avg-tgravityacc-mean-y", "avg-tgravityacc-mean-z",
+"avg-tgravityacc-std-x", "avg-tgravityacc-std-y", "avg-tgravityacc-std-z", 
+"avg-tbodyaccjerk-mean-x", "avg-tbodyaccjerk-mean-y", "avg-tbodyaccjerk-mean-z",
+"avg-tbodyaccjerk-std-x", "avg-tbodyaccjerk-std-y", "avg-tbodyaccjerk-std-z",
+"avg-tbodygyro-mean-x", "avg-tbodygyro-mean-y", "avg-tbodygyro-mean-z",
+"avg-tbodygyro-std-x", "avg-tbodygyro-std-y", "avg-tbodygyro-std-z",
+"avg-tbodygyrojerk-mean-x", "avg-tbodygyrojerk-mean-y", "avg-tbodygyrojerk-mean-z",
+"avg-tbodygyrojerk-std-x", "avg-tbodygyrojerk-std-y", "avg-tbodygyrojerk-std-z",
+"avg-tbodyaccmag-mean", "avg-tbodyaccmag-std", 
+"avg-tgravityaccmag-mean", "avg-tgravityaccmag-std",
+"avg-tbodyaccjerkmag-mean", "avg-tbodyaccjerkmag-std",
+"avg-tbodygyromag-mean", "avg-tbodygyromag-std",
+"avg-tbodygyrojerkmag-mean", "avg-tbodygyrojerkmag-std",
+"avg-fbodyacc-mean-x", "avg-fbodyacc-mean-y", "avg-fbodyacc-mean-z"
+"avg-fbodyacc-std-x", "avg-fbodyacc-std-y", "avg-fbodyacc-std-z",
+"avg-fbodyaccjerk-mean-x", "avg-fbodyaccjerk-mean-y", "avg-fbodyaccjerk-mean-z",
+"avg-fbodyaccjerk-std-x", "avg-fbodyaccjerk-std-y", "avg-fbodyaccjerk-std-z",
+"avg-fbodygyro-mean-x", "avg-fbodygyro-mean-y", "avg-fbodygyro-mean-z",
+"avg-fbodygyro-std-x", "avg-fbodygyro-std-y", "avg-fbodygyro-std-z",
+"avg-fbodyaccmag-mean", "avg-fbodyaccmag-std",
+"avg-fbodybodyaccjerkmag-mean", "avg-fbodybodyaccjerkmag-std",
+"avg-fbodybodygyromag-mean", "avg-fbodybodygyromag-std",
+"avg-fbodybodygyrojerkmag-mean", "avg-fbodybodygyrojerkmag-std".
 
 The rows contain the values labeling the "subject" and "activity" and giving the mean value for each other variable (i.e. the means and standard deviations from the original data set) for the given "subject" and "activity".
